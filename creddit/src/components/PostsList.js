@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   newPost: {
+    width: "100%",
     marginBlock: 30,
     flexDirection: "row",
     gap: 25,
@@ -84,6 +85,7 @@ const styles = StyleSheet.create({
     marginBlock: 10,
     width: 280,
     gap: 30,
+    boxShadow: "10 8 10 #C73659",
   },
   text: {
     color: "#fff",

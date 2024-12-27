@@ -21,22 +21,18 @@ async function addPost(formData) {
   console.log("Add Post ", data);
   return data;
 }
-// {
-//     "title":"post_101",
-//     "description":"this is test 101"
-// }
 
 // Add Comment
 async function addComment(formData) {
-  //   console.log("Add Post", formData);
-  const data = await instance.post(`/${postId}/comments`, formData);
+  const { username, comment, postId } = formData;
+  console.log("Add Post initial", postId);
+  const data = await instance.post(`/${postId}/comments`, {
+    username,
+    comment,
+  });
   console.log("Add Post ", data);
   return data;
 }
-//   {
-//     "username":"user1",
-//     "comment":"this is comment test"
-// }
 
 // Delete Post
 async function deletePost(postId) {

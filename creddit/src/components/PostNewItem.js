@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { addPost } from "../api/posts";
 
-function PostNewItem(props) {
+function PostNewItem() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -26,13 +26,13 @@ function PostNewItem(props) {
         <TextInput
           key={"new-name"}
           style={styles.inputField}
-          onChangeText={(text) => setTitle(text)}
+          onChangeText={(title) => setTitle(title)}
         ></TextInput>
         <Text style={styles.text}>Post</Text>
         <TextInput
           key={"new-post"}
           style={styles.inputField}
-          onChangeText={(text) => setDescription(text)}
+          onChangeText={(description) => setDescription(description)}
         ></TextInput>
         <View style={styles.categories}>
           <TouchableOpacity
